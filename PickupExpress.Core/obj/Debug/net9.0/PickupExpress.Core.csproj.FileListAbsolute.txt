@@ -1,0 +1,11 @@
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.deps.json
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.AssemblyInfoInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.AssemblyInfo.cs
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.csproj.CoreCompileInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\refint\PickupExpress.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\ref\PickupExpress.Core.dll

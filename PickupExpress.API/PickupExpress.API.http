@@ -1,0 +1,6 @@
+@PickupExpress.API_HostAddress = http://localhost:5216
+
+GET {{PickupExpress.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

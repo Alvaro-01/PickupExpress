@@ -1,0 +1,17 @@
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Infrastructure.deps.json
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Infrastructure.runtimeconfig.json
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Infrastructure.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Infrastructure.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Core.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\bin\Debug\net9.0\PickupExpress.Core.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.AssemblyInfo.cs
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupEx.93CCAAF6.Up2Date
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\refint\PickupExpress.Infrastructure.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.pdb
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.genruntimeconfig.cache
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\ref\PickupExpress.Infrastructure.dll
