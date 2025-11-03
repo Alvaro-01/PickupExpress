@@ -9,3 +9,4 @@ C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\De
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\refint\PickupExpress.Core.dll
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.pdb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\ref\PickupExpress.Core.dll
+c:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.sourcelink.json

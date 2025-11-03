@@ -15,3 +15,4 @@ C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastruct
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.pdb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.genruntimeconfig.cache
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\ref\PickupExpress.Infrastructure.dll
+c:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Infrastructure\obj\Debug\net9.0\PickupExpress.Infrastructure.sourcelink.json

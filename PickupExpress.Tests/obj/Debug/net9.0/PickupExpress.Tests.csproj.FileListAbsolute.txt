@@ -157,3 +157,4 @@ C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Tests\obj\D
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Tests\obj\Debug\net9.0\PickupExpress.Tests.pdb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Tests\obj\Debug\net9.0\PickupExpress.Tests.genruntimeconfig.cache
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Tests\obj\Debug\net9.0\ref\PickupExpress.Tests.dll
+c:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Tests\obj\Debug\net9.0\PickupExpress.Tests.sourcelink.json
