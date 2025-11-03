@@ -160,3 +160,4 @@ C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\obj\Deb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\obj\Debug\net9.0\PickupExpress.API.pdb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\obj\Debug\net9.0\PickupExpress.API.genruntimeconfig.cache
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\obj\Debug\net9.0\ref\PickupExpress.API.dll
+c:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\obj\Debug\net9.0\PickupExpress.API.sourcelink.json
