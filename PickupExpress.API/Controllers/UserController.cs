@@ -5,8 +5,9 @@ using PickupExpress.Core.Models;
 
 namespace PickupExpress.API.Controllers
 {
-    [ApiController]
+
     [Route("api/[controller]")]
+    [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
@@ -44,7 +45,7 @@ namespace PickupExpress.API.Controllers
 
         //Creating a new user
         
-        [HttpPost("register")]
+        [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] UserAddDto dto)
         {
             if (!ModelState.IsValid)
