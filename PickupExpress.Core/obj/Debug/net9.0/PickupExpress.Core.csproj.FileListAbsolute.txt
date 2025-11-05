@@ -10,3 +10,15 @@ C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\De
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.pdb
 C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\ref\PickupExpress.Core.dll
 c:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.sourcelink.json
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.deps.json
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.dll
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\bin\Debug\net9.0\PickupExpress.Core.pdb
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.AssemblyInfoInputs.cache
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.AssemblyInfo.cs
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.csproj.CoreCompileInputs.cache
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.sourcelink.json
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.dll
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\refint\PickupExpress.Core.dll
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\PickupExpress.Core.pdb
+c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.Core\obj\Debug\net9.0\ref\PickupExpress.Core.dll
