@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-
 using PickupExpress.Core.Interfaces;
 using PickupExpress.Infrastructure.Data;
 using PickupExpress.Infrastructure.Repositories;
@@ -16,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Register repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
