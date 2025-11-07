@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PickupExpress.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1529492ba22e6f41252e91cf8e6103300aa2c11")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57cf8bd8d5d7a45e0a0fc0fc5904919543d0ddf1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PickupExpress.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PickupExpress.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
