@@ -1,0 +1,19 @@
+using PickupExpress.Core.Models;
+
+namespace PickupExpress.Core.Interfaces
+{
+    public interface IOrderRepository
+    {
+        Task<IEnumerable<Order>> GetAllOrdersAsync();
+        Task<IEnumerable<Order>> GetPendingOrdersAsync();
+        Task<IEnumerable<Order>> GetCompletedOrdersAsync();
+        Task<IEnumerable<Order>> GetCancelledOrdersAsync();
+        Task<Order?> GetOrderByIdAsync(int orderId);
+
+        Task<Order> CreateOrderAsync(Order order);
+        Task<Order?> UpdateOrderStatusAsync(int orderId, OrderStatus newOrderStatus);
+        Task<bool> DeleteOrderAsync(int orderId);
+
+        Task<bool> ExistsAsync(int orderId);
+    }
+}
