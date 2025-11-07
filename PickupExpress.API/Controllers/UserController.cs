@@ -20,27 +20,30 @@ namespace PickupExpress.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            if (!ModelState.IsValid)
-                return Ok(dto);
+           if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
             var user = await _userRepository.ValidateUserCredentialsAsync(dto.Email, dto.Password);
             if (user == null)
             {
-                ModelState.AddModelError("", "Invalid credentials");
-                return Ok(dto);
+                return Unauthorized(new
+                {
+                    message = "Email or password is incorrect"
+                });
             }
 
-            // Store user info in session or claims
-            HttpContext.Session.SetInt32("UserId", user.UserId);
-            HttpContext.Session.SetString("Username", user.Username);
-            HttpContext.Session.SetString("Role", user.Role.ToString());
+            return Ok(new
+            {
+                userId = user.UserId,
+                username = user.Username,
+                role = user.Role.ToString(),
+                message = "Login successful"
+            });
 
-            // Redirect based on role
-            if (user.Role == UserRole.Customer)
-                return RedirectToAction("Dashboard", "Customer");
-            else
-                return RedirectToAction("Dashboard", "Employee");
 
+        
         }
 
         //Creating a new user
