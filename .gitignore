@@ -92,3 +92,23 @@ PickupExpress.Tests/obj/Debug/net9.0/PickupExpress.Tests.pdb
 PickupExpress.Tests/obj/Debug/net9.0/PickupExpress.Tests.sourcelink.json
 PickupExpress.Tests/obj/Debug/net9.0/ref/PickupExpress.Tests.dll
 PickupExpress.Tests/obj/Debug/net9.0/refint/PickupExpress.Tests.dll
+
+# Build output
+bin/
+obj/
+.vs/
+
+# User files
+*.user
+*.suo
+
+# Compiled binaries
+*.dll
+*.exe
+*.pdb
+
+# Logs and cache
+*.log
+*.cache
+*.db
+*.sqlite*

@@ -24,10 +24,7 @@ namespace PickupExpress.Core.Models
         public DateTime OrderDate { get; set; }
 
         //nav props
-
-        
-        public required User Customer { get; set; }
-        public required ICollection<OrderItem> OrderItems { get; set; }
-
+        public User? Customer { get; set; }
+        public ICollection<OrderItem>? OrderItems { get; set; }
     }
 }
