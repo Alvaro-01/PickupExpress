@@ -324,3 +324,11 @@ c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\
 c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.API\obj\Debug\net9.0\PickupExpress.API.pdb
 c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.API\obj\Debug\net9.0\PickupExpress.API.genruntimeconfig.cache
 c:\Users\mias2\OneDrive\Desktop\Sheridan\Semester 5\Enterprise Software Systems\Assignments\ESS\Solution\PickupExpress\PickupExpress.API\obj\Debug\net9.0\ref\PickupExpress.API.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\alvar\OneDrive\Desktop\PROG3000\PickupExpress\PickupExpress.API\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
