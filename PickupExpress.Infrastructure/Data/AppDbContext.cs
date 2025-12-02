@@ -31,7 +31,7 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<OrderItem>()
             .HasOne(oi => oi.Product)
-            .WithMany()
+            .WithMany(p => p.OrderItems)
             .HasForeignKey(oi => oi.ProductId);
     }
 }
