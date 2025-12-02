@@ -14,7 +14,7 @@ namespace PickupExpress.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
@@ -27,6 +27,7 @@ namespace PickupExpress.API.Controllers
         }
 
         [HttpPost("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
            if (!ModelState.IsValid)
