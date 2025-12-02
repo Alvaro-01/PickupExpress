@@ -41,18 +41,18 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
     };
 });
 
 // Add Authorization
 builder.Services.AddAuthorization();
 
-// Configure CORS (important for Blazor client calls)
+// Configure CORS (allow Blazor client origin)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient",
-        policy => policy.WithOrigins("https://localhost:5070") // Blazor WASM dev server
+        policy => policy.WithOrigins("http://localhost:5070") // 👈 match Blazor client origin
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
@@ -66,8 +66,8 @@ if (app.Environment.IsDevelopment())
 
 // Middleware pipeline
 app.UseRouting();
-app.UseCors("AllowBlazorClient");
-app.UseAuthentication();   // 🔑 must come before UseAuthorization
+app.UseCors("AllowBlazorClient");   // 👈 enable CORS before auth
+app.UseAuthentication();            // 👈 must come before UseAuthorization
 app.UseAuthorization();
 
 app.MapControllers();

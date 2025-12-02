@@ -12,73 +12,66 @@ using System.Text;
 namespace PickupExpress.API.Controllers
 {
 
-    [Route("api/[controller]")]
-    [ApiController]
-    
-    public class UserController : ControllerBase
+   [Route("api/[controller]")]
+[ApiController]
+[Authorize]   // applies to all actions by default
+public class UserController : ControllerBase
+{
+    private readonly IUserRepository _userRepository;
+    private readonly IConfiguration _configuration;
+
+    public UserController(IUserRepository userRepository, IConfiguration configuration)
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IConfiguration _configuration;
+        _userRepository = userRepository;
+        _configuration = configuration;
+    }
 
-        public UserController(IUserRepository userRepository, IConfiguration configuration)
+    [HttpPost("login")]
+    [AllowAnonymous]   
+    public async Task<IActionResult> Login([FromBody] LoginDto dto)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var user = await _userRepository.ValidateUserCredentialsAsync(dto.Email, dto.Password);
+        if (user == null)
+            return Unauthorized(new { message = "Email or password is incorrect" });
+
+        // Generate JWT
+        var tokenHandler = new JwtSecurityTokenHandler();
+        var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+
+        var claims = new List<Claim>
         {
-            _userRepository = userRepository;
-            _configuration = configuration;
-        }
+            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(ClaimTypes.Role, user.Role.ToString())
+        };
 
-        [HttpPost("login")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        var tokenDescriptor = new SecurityTokenDescriptor
         {
-           if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.UtcNow.AddMinutes(double.Parse(_configuration["Jwt:ExpireMinutes"])),
+            Issuer = _configuration["Jwt:Issuer"],
+            Audience = _configuration["Jwt:Audience"],
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
 
-            var user = await _userRepository.ValidateUserCredentialsAsync(dto.Email, dto.Password);
-            if (user == null)
-            {
-                return Unauthorized(new
-                {
-                    message = "Email or password is incorrect"
-                });
-            }
-            
-            // Generate JWT token
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var tokenString = tokenHandler.WriteToken(token);
 
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role.ToString())
-            };
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddMinutes(double.Parse(_configuration["Jwt:ExpireMinutes"])),
-                Issuer = _configuration["Jwt:Issuer"],
-                Audience = _configuration["Jwt:Audience"],
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            };
-
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
-
-            return Ok(new
-            {
-                userId = user.UserId,
-                username = user.Username,
-                role = user.Role.ToString(),
-                token = tokenString,
-                message = "Login successful"
-            });
+        return Ok(new
+        {
+            userId = user.UserId,
+            username = user.Username,
+            role = user.Role.ToString(),
+            token = tokenString,
+            message = "Login successful"
+        });
+    }
 
 
-        
-        }
 
         //Creating a new user
         
