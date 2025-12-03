@@ -43,11 +43,12 @@ public class UserController : ControllerBase
 
         var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-            new Claim(ClaimTypes.Name, user.Username),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role.ToString())
+            new Claim("name", user.Username),
+            new Claim("email", user.Email),
+            new Claim("role", user.Role.ToString()),
+            new Claim("userId", user.UserId.ToString())
         };
+
 
         var tokenDescriptor = new SecurityTokenDescriptor
         {
@@ -76,6 +77,7 @@ public class UserController : ControllerBase
         //Creating a new user
         
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateUser([FromBody] UserAddDto dto)
         {
             if (!ModelState.IsValid)
