@@ -50,7 +50,6 @@ namespace PickupExpress.API.Controllers
 
         // POST: api/product
         [HttpPost]
-        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> CreateProduct([FromBody] ProductCreateDto
         dto)
         {
@@ -128,7 +127,6 @@ namespace PickupExpress.API.Controllers
 
         // DELETE: api/product/{id}
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var deleted = await _productRepository.DeleteProductAsync(id);
