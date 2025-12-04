@@ -12,7 +12,7 @@ using System.Text;
 namespace PickupExpress.API.Controllers
 {
 
-   [Route("api/[controller]")]
+[Route("api/[controller]")]
 [ApiController]
 [Authorize]   // applies to all actions by default
 public class UserController : ControllerBase

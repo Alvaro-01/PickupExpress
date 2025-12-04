@@ -25,6 +25,13 @@ namespace PickupExpress.API.Controllers
             return Ok(orders);
         }
 
+        [HttpGet("status/{status}")]
+        public async Task<IActionResult> GetOrdersByStatus(OrderStatus status)
+        {
+            var orders = await _orderRepository.GetOrdersByStatusAsync(status);
+            return Ok(orders);
+        }
+
         // GET: api/order/pending
         [HttpGet("pending")]
         public async Task<IActionResult> GetPendingOrders()
@@ -73,11 +80,21 @@ namespace PickupExpress.API.Controllers
                 return BadRequest(ModelState);
             }
 
+            if (dto.OrderItems == null || dto.OrderItems.Count == 0)
+            {
+                return BadRequest("Order must contain at least one item.");
+            }
+
             var order = new Order
             {
                 CustomerId = dto.CustomerId,
                 Status = dto.Status,
-                OrderDate = dto.OrderDate
+                OrderDate = dto.OrderDate,
+                OrderItems = dto.OrderItems.Select(i => new OrderItem
+                {
+                    ProductId = i.ProductId,
+                    Quantity = i.Quantity
+                }).ToList()
             };
 
             var createdOrder = await _orderRepository.CreateOrderAsync(order);

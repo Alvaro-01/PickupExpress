@@ -17,7 +17,7 @@ namespace PickupExpress.Core.Models
         public int Quantity { get; set; }
 
         //nav props
-        public required Order Order { get; set; }
-        public required Product Product { get; set; }
+        public Order Order { get; set; } = null!;
+        public Product Product { get; set; } = null!;
     }
 }

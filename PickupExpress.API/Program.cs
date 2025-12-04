@@ -13,7 +13,10 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
 // Add controllers with JSON Patch support
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    });
 
 // Configure SQLite Database
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -52,7 +55,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient",
-        policy => policy.WithOrigins("http://localhost:5070") // 👈 match Blazor client origin
+        policy => policy.WithOrigins("http://localhost:5070") // match Blazor client origin
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
@@ -66,8 +69,8 @@ if (app.Environment.IsDevelopment())
 
 // Middleware pipeline
 app.UseRouting();
-app.UseCors("AllowBlazorClient");   // 👈 enable CORS before auth
-app.UseAuthentication();            // 👈 must come before UseAuthorization
+app.UseCors("AllowBlazorClient");   // enable CORS before auth
+app.UseAuthentication();            // must come before UseAuthorization
 app.UseAuthorization();
 
 app.MapControllers();

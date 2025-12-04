@@ -15,5 +15,8 @@ namespace PickupExpress.Core.DTOs
         [Required(ErrorMessage = "Order date is required")]
         [DataType(DataType.DateTime, ErrorMessage = "Invalid date format")]
         public DateTime OrderDate { get; set; }
+
+        [Required]
+        public List<OrderItemCreateDto> OrderItems { get; set; } = new();
     }
 }

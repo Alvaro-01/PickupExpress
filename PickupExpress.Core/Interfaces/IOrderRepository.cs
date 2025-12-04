@@ -5,6 +5,7 @@ namespace PickupExpress.Core.Interfaces
     public interface IOrderRepository
     {
         Task<IEnumerable<Order>> GetAllOrdersAsync();
+        Task<IEnumerable<Order>> GetOrdersByStatusAsync(OrderStatus status);
         Task<IEnumerable<Order>> GetPendingOrdersAsync();
         Task<IEnumerable<Order>> GetCompletedOrdersAsync();
         Task<IEnumerable<Order>> GetCancelledOrdersAsync();

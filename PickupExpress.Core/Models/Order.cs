@@ -7,6 +7,7 @@ namespace PickupExpress.Core.Models
         Pending,
         Processing,
         Completed,
+        PickedUp,
         Cancelled
     }
     public class Order
@@ -25,6 +26,6 @@ namespace PickupExpress.Core.Models
 
         //nav props
         public User? Customer { get; set; }
-        public ICollection<OrderItem>? OrderItems { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
     }
 }

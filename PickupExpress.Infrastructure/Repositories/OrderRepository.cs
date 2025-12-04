@@ -17,7 +17,21 @@ namespace PickupExpress.Infrastructure.Repositories
 
         public async Task<IEnumerable<Order>> GetAllOrdersAsync()
         {
-            return await _context.Orders.ToListAsync();
+            return await _context.Orders
+                    .Include(o => o.Customer)
+                    .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                    .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Order>> GetOrdersByStatusAsync(OrderStatus status)
+        {
+            return await _context.Orders
+                    .Where(o => o.Status == status)
+                    .Include(o => o.Customer)
+                    .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                    .ToListAsync();
         }
 
         public async Task<IEnumerable<Order>> GetPendingOrdersAsync()
@@ -40,7 +54,11 @@ namespace PickupExpress.Infrastructure.Repositories
 
         public async Task<Order?> GetOrderByIdAsync(int orderId)
         {
-            return await _context.Orders.FindAsync(orderId);
+            return await _context.Orders
+                    .Include(o => o.Customer)
+                    .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                    .FirstOrDefaultAsync(o => o.OrderId == orderId);
         }
 
         public async Task<Order> CreateOrderAsync(Order order)
