@@ -56,6 +56,19 @@ namespace PickupExpress.API.Controllers
             return Ok(orders);
         }
 
+        // GET: api/order/user/{userId}
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetOrdersByUserId(int userId)
+        {
+            var orders = await _orderRepository.GetOrdersByUserIdAsync(userId);
+
+            if (orders == null || !orders.Any())
+                return NotFound($"No orders under user {userId}");
+
+            return Ok(orders);
+        }
+
+
         // GET: api/order/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetOrderById(int id)

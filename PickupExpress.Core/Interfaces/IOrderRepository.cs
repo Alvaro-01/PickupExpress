@@ -9,6 +9,7 @@ namespace PickupExpress.Core.Interfaces
         Task<IEnumerable<Order>> GetPendingOrdersAsync();
         Task<IEnumerable<Order>> GetCompletedOrdersAsync();
         Task<IEnumerable<Order>> GetCancelledOrdersAsync();
+        Task<List<Order>> GetOrdersByUserIdAsync(int userId);
         Task<Order?> GetOrderByIdAsync(int orderId);
 
         Task<Order> CreateOrderAsync(Order order);

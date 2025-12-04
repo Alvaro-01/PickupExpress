@@ -52,6 +52,17 @@ namespace PickupExpress.Infrastructure.Repositories
                     o.Status == OrderStatus.Cancelled).ToListAsync();
         }
 
+        public async Task<List<Order>> GetOrdersByUserIdAsync(int userId)
+        {
+            return await _context.Orders
+                    .Where(o => o.CustomerId == userId)
+                    .Include(o => o.OrderItems)
+                    .ThenInclude(oi => oi.Product)
+                    .Include(o => o.Customer)
+                    .OrderByDescending(o => o.OrderDate) // To show most recent orders first
+                    .ToListAsync();
+        }
+
         public async Task<Order?> GetOrderByIdAsync(int orderId)
         {
             return await _context.Orders
@@ -65,6 +76,31 @@ namespace PickupExpress.Infrastructure.Repositories
         {
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
+
+            foreach (var item in order.OrderItems)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+
+                if (product == null)
+                {
+                    throw new Exception($"Product with ID {item.ProductId} not found.");
+                }
+
+                if (product.QuantityInStock <= 0)
+                {
+                    throw new Exception($"{product.Name} is out of stock.");
+                }
+
+                if (product.QuantityInStock < item.Quantity)
+                {
+                    throw new Exception($"Not enough stock for {product.Name}.");
+                }
+
+                product.QuantityInStock -= item.Quantity;
+            }
+
+            await _context.SaveChangesAsync();
+
             return order;
         }
 
