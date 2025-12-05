@@ -14,6 +14,7 @@ namespace PickupExpress.Core.Interfaces
 
         Task<Order> CreateOrderAsync(Order order);
         Task<Order?> UpdateOrderStatusAsync(int orderId, OrderStatus newOrderStatus);
+        Task<Order?> UpdateOrderNotesAsync(int orderId, string notes);
         Task<bool> DeleteOrderAsync(int orderId);
 
         Task<bool> ExistsAsync(int orderId);

@@ -118,6 +118,21 @@ namespace PickupExpress.Infrastructure.Repositories
             return existingOrder;
         }
 
+        public async Task<Order?> UpdateOrderNotesAsync(int orderId, string notes)
+        {
+            var existingOrder = await _context.Orders.FindAsync(orderId);
+            if (existingOrder == null)
+            {
+                return null;
+            }
+
+            existingOrder.Notes = notes;
+
+            await _context.SaveChangesAsync();
+            return existingOrder;
+        }
+
+
         public async Task<bool> DeleteOrderAsync(int orderId)
         {
             var order = await _context.Orders.FindAsync(orderId);

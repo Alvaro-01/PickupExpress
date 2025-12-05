@@ -139,6 +139,26 @@ namespace PickupExpress.API.Controllers
             return Ok(updatedOrder);
         }
 
+        // PATCH: api/order/{id}/notes
+        [HttpPatch("{id}/notes")]
+        public async Task<IActionResult> UpdateOrderNotesAsync(int id, [FromBody] OrderNotesUpdateDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var exists = await _orderRepository.ExistsAsync(id);
+            if (!exists)
+            {
+                return NotFound(new { message = $"Order with ID {id} not found" });
+            }
+
+            var updatedOrder = await _orderRepository.UpdateOrderNotesAsync(id, dto.NewNotes);
+
+            return Ok(updatedOrder);
+        }
+
         // DELETE: api/order/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)

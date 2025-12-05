@@ -24,6 +24,8 @@ namespace PickupExpress.Core.Models
         [Required(ErrorMessage = "Order date is required")]
         public DateTime OrderDate { get; set; }
 
+        public string? Notes { get; set; }
+
         //nav props
         public User? Customer { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
