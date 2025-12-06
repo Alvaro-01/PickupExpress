@@ -48,7 +48,7 @@ public class UserController : ControllerBase
             new Claim("role", user.Role.ToString()),
             new Claim("userId", user.UserId.ToString())
         };
-
+ 
 
         var tokenDescriptor = new SecurityTokenDescriptor
         {

@@ -48,6 +48,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
 // Add Authorization
 builder.Services.AddAuthorization();
 
@@ -55,7 +56,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowBlazorClient",
-        policy => policy.WithOrigins("http://localhost:5070") // match Blazor client origin
+        policy => policy.WithOrigins("https://pickupexpress-e8avdyhnapfcdyfc.canadacentral-01.azurewebsites.net/") // match Blazor client origin
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });
